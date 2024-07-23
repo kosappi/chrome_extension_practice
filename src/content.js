@@ -1,0 +1,1 @@
+window.alert('this is a very new extension alert. thank you.');
