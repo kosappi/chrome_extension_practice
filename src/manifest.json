@@ -1,16 +1,19 @@
 {
-  "name": "Sample",
+  "name": "sample extension",
   "version": "0.0.1",
+  "description": "this is sample extension.",
   "manifest_version": 3,
-  "description": "Sample Chrome Extension",
-  "content_scripts": [
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Default Title",
+    "default_popup": "popups/popup.html"
+  },
+  "web_accessible_resources": [
     {
-      "matches": [
-        "https://*.buffett-code.com/*"
-      ],
-      "js": [
-        "content.js"
-      ]
+      "resources": [ "popups/popup.html" ],
+      "matches": [ "http://localhost:3000/*" ]
     }
   ]
 }

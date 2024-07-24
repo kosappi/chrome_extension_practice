@@ -1,1 +1,3 @@
-window.alert('this is a very new extension alert. thank you.');
+const currentLocation = window.location.href;
+
+window.alert(`Current location is [${currentLocation}]. Thank you.`);
